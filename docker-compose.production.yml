@@ -38,4 +38,4 @@ services:
       - static:/staticfiles/
       - media:/var/www/kittygram/media/
     ports:
-      - 9000:80
+      - 9000:8000
