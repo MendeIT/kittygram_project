@@ -2,6 +2,7 @@ test:
 	docker compose exec backend python manage.py migrate
 	docker compose exec backend python manage.py collectstatic
 	sudo docker compose exec backend cp -r /app/collected_static/. /backend/static/
+
 deploy:
 	cd kittygram
 	sudo docker compose -f docker-compose.production.yml pull
