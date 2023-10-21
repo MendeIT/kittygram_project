@@ -4,7 +4,6 @@ test:
 	sudo docker compose exec backend cp -r /app/collected_static/. /backend/static/
 
 deploy:
-	cd kittygram
 	sudo docker compose -f docker-compose.production.yml pull
 	sudo docker compose -f docker-compose.production.yml down
 	sudo docker compose -f docker-compose.production.yml up -d
