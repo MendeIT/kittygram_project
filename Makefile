@@ -1,7 +1,7 @@
 test:
 	docker compose exec backend python manage.py migrate
 	docker compose exec backend python manage.py collectstatic
-	sudo docker compose exec backend cp -r /app/collected_static/. /backend/static/
+	sudo docker compose exec backend cp -r /app/collected_static/. /backend_static/static/
 
 deploy:
 	sudo docker compose -f docker-compose.production.yml pull
